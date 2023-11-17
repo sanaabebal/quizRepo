@@ -9,8 +9,8 @@ public class Runner {
 /*
  * The Collatz conjecture is a mathematical sequence defined as follows: start with any positive integer n. Then, each term is obtained from the previous term according to these rules:
 
-    If the previous term is even, the next term is one half of the previous term.
-    If the previous term is odd, the next term is 3 times the previous term plus 1.
+    If the previous term is even, the next term is one half of the previous term. ( even (1/2) )
+    If the previous term is odd, the next term is 3 times the previous term plus 1. (odd*3)+1
 
 The conjecture is that no matter what value of n, the sequence will always eventually reach the number 1.
 
@@ -24,21 +24,22 @@ For example, below are the resulting sequences for some values of n given the ru
  */
 	public static String collatzNumber(int n) {
 		//enter solution below
-        String result = _____;
+        String result = "";
         
-        while( n _____  ){   
-            result += _____;
+        while( n != 1 ){   
+            result += " "+ n;
             
-            if( n % 2 = ____   ){ 
+            if( n % 2 == 0  ){ 
                 //even
+            	n=n/2;
                 
             }else{
-                //odd
+                n= (n*3)+1;
                 
             }
         }
                 
-        return ______;
+        return result + " 1";
 	}
 
 }
